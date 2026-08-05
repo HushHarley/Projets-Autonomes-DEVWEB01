@@ -1,0 +1,64 @@
+body {
+    background-color: rgb(5, 0, 60);
+    color: white;
+    margin: 0px;
+}
+
+/* CHARACTERS */
+
+nav {}
+
+.topNavBar {}
+
+.topNavBarButtonsDiv {}
+
+.characterCarte {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 40px;
+}
+
+.characterCarte img {
+    width: 20%;
+
+    margin: 0px;
+}
+
+.characterCarte h2 {
+    margin: 0px;
+}
+
+/* SPELLS */
+
+.spellCarte {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 40px;
+}
+
+.spellCarte img {
+    width: 20%;
+
+    margin: 0px;
+}
+
+.spellCarte h2 {
+    margin: 0px;
+}
+
+/* BOOKS */
+
+.bookCarte {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 40px;
+}
+
+.bookCarte img {
+    width: 20%;
+    margin: 0px;
+}
+
+.bookCarte h2 {
+    margin: 0px;
+}
