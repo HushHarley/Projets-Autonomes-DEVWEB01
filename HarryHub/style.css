@@ -1,39 +1,156 @@
 body {
+    max-width: 100%;
     background-color: rgb(5, 0, 60);
     color: white;
     margin: 0px;
 }
 
-/* CHARACTERS */
+/* HOME */
 
 nav {}
 
-.topNavBar {}
+header {}
 
-.topNavBarButtonsDiv {}
+#harrypotterImg {
+    width: 168px;
+    height: 61px;
+    margin: 6px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-content {
+    max-height: 0;
+    overflow: hidden;
+    font-family: 'Oswald', sans-serif;
+    padding: 0 0 0 50px;
+
+}
+
+.collapsible-menu {
+    display: flex;
+    flex-flow: row;
+    position: relative; /* add this */
+    background-color: rgb(4, 39, 94);
+    padding: 0px 30px;
+    border-bottom: 3px solid #ffffff;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.collapsible-menu ul {
+    display: flex;
+    flex-flow: column;
+    list-style-type: none;
+    padding: 0;
+}
+
+.collapsible-menu a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.collapsible-menu label {
+    font-family: 'Sedgwick Ave Display', cursive;
+    font-size: 36px;
+    display: block;
+    cursor: pointer;
+    background: url(https://cdn-icons-png.flaticon.com/128/16545/16545977.png) no-repeat left center;
+    background-size: 50px 50px;
+    padding: 10px 0 10px 65px;
+    width: 100px;
+    text-align: center;
+    align-self: center;
+}
+
+input#menu {
+    display: none;
+}
+
+input:checked+label {
+    background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png);
+}
+
+input:checked~label {
+    background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png);
+}
+
+input:checked~.menu-content {
+    max-height: 100%;
+}
+
+#homeTitle {
+    margin: 20px;
+}
+
+#homeDescription {
+    margin: 20px;
+}
+
+/* CHARACTERS */
+
+#characterGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
 
 .characterCarte {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column-reverse;
     margin: 40px;
+    border: 6px solid black;
+    border-radius: 50px;
+    align-items: center;
 }
 
 .characterCarte img {
-    width: 20%;
-
-    margin: 0px;
+    width: 40%;
+    margin: 40px 10px 10px 10px;
+    border-radius: 20px;
 }
 
 .characterCarte h2 {
-    margin: 0px;
+    margin: 10px;
+}
+
+.nickname {
+    margin: 10px;
+}
+
+.hogwartsHouse {
+    margin: 10px;
+}
+
+.children {
+    margin: 10px;
+    padding: 10px;
 }
 
 /* SPELLS */
+
+#spellGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 
 .spellCarte {
     display: flex;
     flex-flow: column wrap;
     margin: 40px;
+    border: 6px solid black;
+    border-radius: 20px;
+    align-items: center;
+}
+
+#use {
+    margin: 20px;
+    text-align: center;
+}
+
+#wand {
+    margin: 20px
 }
 
 .spellCarte img {
@@ -54,11 +171,29 @@ nav {}
     margin: 40px;
 }
 
+.bookCarte h2 {
+    margin: 0px;
+    text-align: center;
+}
+
+.bookCarte p {
+    text-align: center;
+
+}
+
 .bookCarte img {
-    width: 20%;
+    align-self: center;
+    width: 30%;
     margin: 0px;
 }
 
-.bookCarte h2 {
-    margin: 0px;
+/* MEDIA QUERIES */
+
+@media (max-width:430) {
+
+#characterGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 }

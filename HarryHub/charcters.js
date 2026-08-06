@@ -14,14 +14,15 @@ function afficherData(donnees) {
     for (let index = 0; index < donnees.length; index++) {
         let div = document.createElement("div");
         div.classList = "characterCarte";
-        div.innerHTML = `<h2>${donnees[index].fullName}</h2>
-                        <p class="nickname">${donnees[index].nickname}</p>
-                        <p class="hogwartsHouse">${donnees[index].hogwartsHouse || "Unknown gender"}</p>
-                        <p class="children">${donnees[index].children || "Date of birth unknown"}</p>
-                        <img src="${donnees[index].image || "https://cdn.iconscout.com/icon/free/png-512/free-help-icon-svg-download-png-2202931.png?f=webp&w=512"}" alt="">
+        div.innerHTML = `
+        <p class="children">${donnees[index].children || "Date of birth unknown"}</p>
+        <p class="hogwartsHouse">${donnees[index].hogwartsHouse || "Unknown gender"}</p>
+        <p class="nickname">${donnees[index].nickname}</p>
+        <h2>${donnees[index].fullName}</h2>
+        <img src="${donnees[index].image || "https://cdn.iconscout.com/icon/free/png-512/free-help-icon-svg-download-png-2202931.png?f=webp&w=512"}" alt="">
         `
 
-        document.body.appendChild(div)
+        document.getElementById("characterGrid").appendChild(div)
     }
 }
 
