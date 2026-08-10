@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="collapsible-menu">
+            <input type="checkbox" id="menu">
+            <label for="menu">Menu</label>
+            <div class="menu-content">
+                <ul class="menu-items">
+                    <li><a href="harryHome.html">Home</a></li>
+                    <li><a href="keyCharacterList.html">KeyCharcters</a></li>
+                    <li><a href="harryBooks.html">Books</a></li>
+                    <li><a href="reservations.html">Upcoming</a></li>
+                </ul>
+            </div>
+            <img id="harrypotterImg"
+                src="https://www.harrypotter.com/_next/static/images/logo-gold-600-7a7e89b6db1ffeaab025f2091d21b645.png"
+                alt="">
+        </div>
+        <div class="backgroundAudio">
+            <audio id="audioPlayer" autoplay controls>
+                <source
+                    src="/HarryHub/music/Hogwarts Legacy Official Soundtrack Seeking the Keepers - chuck e. myers “sea” WaterTower Music - WaterTower Music (128k).mp3">
+            </audio>
+        </div>
+    </header>
+
+    <h1 id="contactTitle">Subscribe for news about upcoming movies, novels and more!</h1>
+    <p id="contactDescription">please fill out the following form to get updated</p>
+    <div class="contactBlock">
+        <div class="contactForms">
+            <form action="">
+                <div class="formName">
+                    <label for="formName">Name:</label>
+                    <input type="text" id="formName" name="formName" placeholder="Joe Swanson" required>
+                </div>
+                <br>
+                <div class="formEmail">
+                    <label for="formEmail">Email:</label>
+                    <input type="email" id="formEmail" name="formEmail" placeholder="...@gmail.com" required>
+                </div>
+                <br>
+                <div class="formPhoneNumber">
+                    <label for="formPhoneNumber">Phone:</label>
+                    <input type="tel" id="formPhoneNumber" name="formPhoneNumber" placeholder="optional">
+                </div>
+                <br>
+                <div class="formPassword">
+                    <label for="formPassword">Password:</label>
+                    <input type="password" id="formPassword" name="formPassword" placeholder="abc123" required>
+                </div>
+                <br>
+                <div class="formCheckbox">
+                    <label for="formCheckbox">Movie News:</label>
+                    <input type="Checkbox" id="formCheckboxMovie" name="formCheckboxMovie">
+                    <label for="formCheckbox">Novel News:</label>
+                    <input type="Checkbox" id="formCheckboxNovel" name="formCheckboxNovel">
+                </div>
+                <br>
+                <div class="formButtons">
+                    <input id="submitButton" type="submit">
+                    <input id="resetButton" type="Reset">
+                </div>
+                <br>
+            </form>
+        </div>
+    </div>
+    <script src="reservations.js"></script>
+</body>
+
+</html>
