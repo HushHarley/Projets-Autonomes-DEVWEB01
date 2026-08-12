@@ -26,6 +26,8 @@ function afficherData(donnees) {
     }
 }
 
+const soundVolume = document.querySelector(".audioPlayer");
+soundVolume.volume = 0.5;
 
 // "id": "ca3827f0-375a-4891-aaa5-f5e8a5bad225",
 //     "name": "Minerva McGonagall",

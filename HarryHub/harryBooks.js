@@ -1,4 +1,4 @@
-getApiCharacterInfo()
+getApiCharacterInfo();
 
 async function getApiCharacterInfo() {
     try {
@@ -11,15 +11,22 @@ async function getApiCharacterInfo() {
 }
 
 function afficherData(donnees) {
+    const bookCarteBoite = document.querySelector(".bookCarteBoite");
+
     for (let index = 0; index < donnees.length; index++) {
         let div = document.createElement("div");
         div.classList = "bookCarte";
-        div.innerHTML = `<h2 class="bookName">${donnees[index].title}</h2>
-                        <p class="bookDescription">${donnees[index].description}</p>
-                        <img class="bookCover" src="${bookImages[index]}" alt="">
+        div.innerHTML = `
+        <div class="borderLineLine1"></div>
+        <img class="borderLineMid">
+        <img class="borderLineMid" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMiIgaGVpZ2h0PSIxNyIgdmlld0JveD0iMCAwIDMyIDE3Ij4KICAgIDxwYXRoIGZpbGw9IiM3NTc1NzUiIGZpbGwtcnVsZT0ibm9uemVybyIgZD0iTTguMjk1IDBsOC4yOTUgOC4yOTUtOC4yOTUgOC4yOTVMMCA4LjI5NSA4LjI5NSAwem0wIDEuNDE0bC02Ljg4IDYuODgxIDYuODggNi44ODEgNi44ODEtNi44OC02Ljg4LTYuODgyek0xNS44ODMgMGw4LjI5NSA4LjI5NS04LjI5NSA4LjI5NS04LjI5NS04LjI5NUwxNS44ODMgMHptMCAxLjQxNGwtNi44OCA2Ljg4MSA2Ljg4IDYuODgxIDYuODgtNi44OC02Ljg4LTYuODgyek0yMy40NzEgMGw4LjI5NSA4LjI5NS04LjI5NSA4LjI5NS04LjI5NS04LjI5NUwyMy40NyAwek0xNi41OSA4LjI5NWw2Ljg4IDYuODgxIDYuODgyLTYuODgtNi44ODEtNi44ODItNi44ODEgNi44ODF6IiBvcGFjaXR5PSIuMjYzIi8+Cjwvc3ZnPgo="  ></img>
+        <h2 class="bookName">${donnees[index].title}</h2>
+        <p class="bookDescription">${donnees[index].description}</p>
+        <div class="borderLineLine2"></div>
+        <img class="bookCover" src="${bookImages[index]}" alt="">
         `
 
-        document.body.appendChild(div)
+        bookCarteBoite.appendChild(div);
     }
 }
 
@@ -34,13 +41,5 @@ const bookImages = [
     "https://www.harrypotter.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-8.jpg&w=1320&q=75"
 ];
 
-// books.forEach(function(books, index) {
-//     let div = document.createElement("div");
-//     div.classList = "bookCarte";
-
-//     div.innerHTML = ` <img class="bookCover" src="${bookImages[index]}" alt=""> `
-
-//     document.getElementById("bookGrid").appendChild(div)
-// })
-
-// i wanna make a for each and add the book covers :) gl me
+const audioPlayer = document.querySelector(".audioPlayer");
+audioPlayer.volume = 0.5; 
