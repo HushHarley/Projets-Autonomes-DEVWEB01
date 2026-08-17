@@ -23,10 +23,6 @@ body {
     flex-direction: column;
 }
 
-.contactContainer {
-    flex: 1;
-}
-
 /* HOME */
 
 nav {}
@@ -127,13 +123,6 @@ input:checked~.menu-content {
     max-height: 100%;
 }
 
-.backgroundAudio {
-    display: flex;
-    justify-self: end;
-    border: #00001b 4px solid;
-
-}
-
 #homeTitle {
     margin: 20px;
 }
@@ -142,11 +131,116 @@ input:checked~.menu-content {
     margin: 20px;
 }
 
+.backgroundAudio {
+    display: flex;
+    justify-self: end;
+    border: #00001b 4px solid;
+
+}
+
+.audioPlayer {
+    display: none;
+    background-color: var(--colour-accent);
+}
+
+.aboutContent {
+    flex: 1;
+    margin: 10px;
+}
+
+.homeBackgroundImage {
+    background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/5aTS3wZoIow3nPaPHq9tQx/c782138d22995fe8b3aef551dd0a71c4/hog-leg-hero-darker.jpg?q=75&fm=jpg&w=2560);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0% 0% 50% 0%;
+    margin-top: -20px;
+}
+
+#homeBackgroundImageFade {
+    background-image: linear-gradient(to top, var(--colour-main), var(--colour-main), transparent 100%);
+    padding-top: 15%;
+    margin-top: -10%;
+}
+
+#WhoisHarryPotter {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px 30px 10px 30px;
+    align-items: start;
+}
+
+#WhoisHarryPotter h2 {}
+
+#WhoisHarryPotter p {
+    width: 40%;
+    text-align: start;
+}
+
+#WheretheStoryTakesPlace {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px 30px 10px 30px;
+    align-items: end;
+}
+
+#WheretheStoryTakesPlace h2 {}
+
+#WheretheStoryTakesPlace p {
+    width: 40%;
+    text-align: end;
+}
+
+#FullSummary {
+    display: flex;
+    flex-flow: column wrap;
+    margin: 10px 30px 10px 30px;
+    align-items: start;
+}
+
+#FullSummary h2 {}
+
+#FullSummary p {
+    width: 40%;
+    text-align: start;
+}
+
+#homePageBottomImageFade {
+    background-image: linear-gradient(to bottom, var(--colour-main), var(--colour-main), transparent 60%);
+    padding-top: 15%;
+    margin-top: 0%;
+    margin-bottom: -155px;
+    z-index: 1;
+}
+
+#homePageBottomImage {
+    background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/7zG8AlntRmY5egJxHcrJHp/78915e490601ccc030847ddf212ba3ad/2f8567f07eb618d0475b66928ced4f4b92343f47.png?q=75&fm=webp&w=720&h=165&fit=fill);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0% 0% 10% 0%;
+}
+
 /* CHARACTERS */
+
+#characterPageTopImage {
+    background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/2oBQPYJetpSuX6twwhPVIs/bdb5cfd9e2a5c9cb27bf8e2cd5238ab7/hp5-order-of-phoenix-exam-desks-hogwarts.jpg?q=75&fm=webp&w=2880);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0% 0% 50% 0%;
+    margin-top: -20px;
+}
+
+#characterPageTopFade {
+    background-image: linear-gradient(to top, var(--colour-main), var(--colour-main), transparent 100%);
+    padding-top: 200px;
+    margin-top: -200px;
+}
 
 #characterGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .characterCarte {
@@ -273,6 +367,25 @@ input:checked~.menu-content {
 
 /* Contact Page */
 
+.contactContainer {
+    flex: 1;
+}
+
+#contactPageTopImage {
+    background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/3hL1zLNXwNNorUQPV344E5/05ad663a8aba784a918e4469abce6e85/News.png?q=75&fm=webp&w=2880);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0% 0% 20% 0%;
+    margin-top: -20px;
+}
+
+#contactPageTopImageFade {
+    background-image: linear-gradient(to top, var(--colour-main), var(--colour-main), transparent 100%);
+    padding-top: 200px;
+    margin-top: -100px;
+}
+
 .contactBlock {
     display: block;
     justify-self: center;
@@ -332,10 +445,6 @@ input:checked~.menu-content {
     background-color: darkgreen;
 }
 
-.audioPlayer {
-    display: none;
-    background-color: var(--colour-accent);
-}
 
 #contactTitle {
     text-align: center;
@@ -356,8 +465,6 @@ input:checked~.menu-content {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    border-top-left-radius: 26px;
-    border-top-right-radius: 26px;
 }
 
 .menuItemsItems {
@@ -480,11 +587,72 @@ input:checked~.menu-content {
         max-height: 100%;
     }
 
+    #WhoisHarryPotter {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 30px 10px 30px;
+        align-items: start;
+    }
+
+    #WhoisHarryPotter h2 {}
+
+    #WhoisHarryPotter p {
+        width: 40%;
+        text-align: start;
+    }
+
+    #WheretheStoryTakesPlace {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 30px 10px 30px;
+        align-items: end;
+    }
+
+    #WheretheStoryTakesPlace h2 {}
+
+    #WheretheStoryTakesPlace p {
+        width: 40%;
+        text-align: end;
+    }
+
+    #FullSummary {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 10px 30px 10px 30px;
+        align-items: start;
+    }
+
+    #FullSummary h2 {}
+
+    #FullSummary p {
+        width: 40%;
+        text-align: start;
+    }
+
+    #homePageBottomImageFade {
+        background-image: linear-gradient(to bottom, var(--colour-main), var(--colour-main), transparent 60%);
+        padding-top: 15%;
+        margin-top: 0%;
+        margin-bottom: -15%;
+        z-index: 1;
+    }
+
+    #homePageBottomImage {
+        background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/7zG8AlntRmY5egJxHcrJHp/78915e490601ccc030847ddf212ba3ad/2f8567f07eb618d0475b66928ced4f4b92343f47.png?q=75&fm=webp&w=720&h=165&fit=fill);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 0% 0% 20% 0%;
+    }
+
+    /* characters */
+
     #characterGrid {
         display: grid;
         grid-template-columns: 1fr;
     }
 
+    /* books */
 
     .topPageAbout {
         background-image: url(https://www.harrypotter.com/_next/static/images/books-desk-2880-d91f9951754bd9554ccb6ba8c68f1b2c.png);

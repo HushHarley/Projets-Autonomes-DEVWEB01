@@ -33,30 +33,37 @@
         </div>
     </header>
 
-<section class="contactContainer">
+    <div id="contactPageTopImage"></div>
+    <div id="contactPageTopImageFade"></div>
+
+    <section class="contactContainer">
         <h1 id="contactTitle">Subscribe for news about upcoming movies, novels and more!</h1>
         <p id="contactDescription">please fill out the following form to get updated</p>
         <div class="contactBlock">
             <div class="contactForms">
-                <form action="">
+                <form id="contactForm">
                     <div class="formName">
                         <label for="formName">Name:</label>
                         <input type="text" id="formName" name="formName" placeholder="Joe Swanson" required>
+                        <span class="error-message" id="formNameError"></span>
                     </div>
                     <br>
                     <div class="formEmail">
                         <label for="formEmail">Email:</label>
                         <input type="email" id="formEmail" name="formEmail" placeholder="...@gmail.com" required>
+                        <span class="error-message" id="formEmailError"></span>
                     </div>
                     <br>
                     <div class="formPhoneNumber">
                         <label for="formPhoneNumber">Phone:</label>
                         <input type="tel" id="formPhoneNumber" name="formPhoneNumber" placeholder="optional">
+                        <span class="error-message" id="formPhoneNumberError"></span>
                     </div>
                     <br>
                     <div class="formPassword">
                         <label for="formPassword">Password:</label>
                         <input type="password" id="formPassword" name="formPassword" placeholder="abc123" required>
+                        <span class="error-message" id="formPasswordError"></span>
                     </div>
                     <br>
                     <div class="formCheckbox">
@@ -69,12 +76,14 @@
                     <div class="formButtons">
                         <input id="submitButton" type="submit">
                         <input id="resetButton" type="Reset">
-                    </div>
-                    <br>
+                        <br>
                 </form>
             </div>
         </div>
-</section>
+    </section>
+
+    <div id="contactPageBottomImage"></div>
+    <div id="contactPageBottomImageFade"></div>
 
     <footer>
         <div class="menuItemsFooter">

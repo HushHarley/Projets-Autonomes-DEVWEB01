@@ -42,4 +42,4 @@ const bookImages = [
 ];
 
 const audioPlayer = document.querySelector(".audioPlayer");
-audioPlayer.volume = 0.5; 
+audioPlayer.volume = 0.1; 
