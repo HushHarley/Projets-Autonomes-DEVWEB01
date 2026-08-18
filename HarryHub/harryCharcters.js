@@ -26,8 +26,15 @@ function afficherData(donnees) {
     }
 }
 
-const soundVolume = document.querySelector(".audioPlayer");
+const soundVolume = document.querySelector(".audioPlayerAudio");
 soundVolume.volume = 0.1;
+
+const muteButton = document.getElementById("muteButton");
+
+muteButton.addEventListener("click", function () {
+    soundVolume.muted = !soundVolume.muted;
+    muteButton.textContent = soundVolume.muted ? "🔇 Unmute" : "🔊 Mute";
+});
 
 // "id": "ca3827f0-375a-4891-aaa5-f5e8a5bad225",
 //     "name": "Minerva McGonagall",

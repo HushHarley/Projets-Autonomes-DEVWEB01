@@ -41,5 +41,12 @@ const bookImages = [
     "https://www.harrypotter.com/_next/image?url=%2Fimages%2Fproducts%2Fbooks%2FUK%2Frectangle-8.jpg&w=1320&q=75"
 ];
 
-const audioPlayer = document.querySelector(".audioPlayer");
+const audioPlayer = document.querySelector(".audioPlayerAudio");
 audioPlayer.volume = 0.1; 
+
+const muteButton = document.getElementById("muteButton");
+
+muteButton.addEventListener("click", function () {
+    soundVolume.muted = !soundVolume.muted;
+    muteButton.textContent = soundVolume.muted ? "🔇 Unmute" : "🔊 Mute";
+});

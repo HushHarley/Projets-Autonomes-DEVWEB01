@@ -36,5 +36,12 @@ document.getElementById("contactForm").addEventListener("submit", function (e) {
     }
 });
 
-const soundVolume = document.querySelector(".audioPlayer");
+const soundVolume = document.querySelector(".audioPlayerAudio");
 soundVolume.volume = 0.1;
+
+const muteButton = document.getElementById("muteButton");
+
+muteButton.addEventListener("click", function () {
+    soundVolume.muted = !soundVolume.muted;
+    muteButton.textContent = soundVolume.muted ? "🔇 Unmute" : "🔊 Mute";
+});

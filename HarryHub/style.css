@@ -13,6 +13,10 @@
     --colour-border: #060136;
 }
 
+@view-transition {
+    navigation: auto;
+}
+
 body {
     max-width: 100%;
     background-color: var(--colour-main);
@@ -138,7 +142,18 @@ input:checked~.menu-content {
 
 }
 
-.audioPlayer {
+.collapsible-menu button {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    text-align: center;
+    align-self: center;
+    border-radius: 100px;
+    max-width: 64px;
+    max-height: 60px;
+}
+
+.audioPlayerAudio {
     display: none;
     background-color: var(--colour-accent);
 }
@@ -148,68 +163,150 @@ input:checked~.menu-content {
     margin: 10px;
 }
 
+.aboutContent h1 {
+    text-align: center;
+}
+
 .homeBackgroundImage {
     background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/5aTS3wZoIow3nPaPHq9tQx/c782138d22995fe8b3aef551dd0a71c4/hog-leg-hero-darker.jpg?q=75&fm=jpg&w=2560);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0% 0% 50% 0%;
+    padding: 0% 0% 34% 0%;
     margin-top: -20px;
 }
 
 #homeBackgroundImageFade {
     background-image: linear-gradient(to top, var(--colour-main), var(--colour-main), transparent 100%);
-    padding-top: 15%;
+    padding-top: 18%;
     margin-top: -10%;
 }
 
-#WhoisHarryPotter {
+/* #WhoisHarryPotter {
     display: flex;
     flex-flow: column wrap;
     margin: 10px 30px 10px 30px;
     align-items: start;
+} */
+
+.homeBackgroundImage p {
+    margin: 0px 30% 0px 30%;
+    padding: 5% 0px 0px 0px;
+    text-align: center;
+    font-size: 24px;
 }
 
-#WhoisHarryPotter h2 {}
+.homeBackgroundImage h1 {
+    margin: 0;
+    padding: 2% 0% 0% 0%;
+    text-align: center;
+    font-size: 76px;
+}
+
+
+h1 {
+    margin: 0px 20px 150px 20px;
+    z-index: 2;
+    text-align: center;
+    font-size: 52px;
+}
+
+#WhoisHarryPotter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
+}
+
+#WhoisHarryPotter h2 {
+    grid-column: 1;
+    text-align: center;
+    font-size: 38px;
+}
 
 #WhoisHarryPotter p {
-    width: 40%;
-    text-align: start;
+    width: 60%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    grid-row: 2;
+    font-size: 24px;
+}
+
+#WhoisHarryPotter img {
+    width: 45%;
+    height: 85%;
+    align-self: center;
+    grid-row: 2;
+    position: relative;
+    top: -20%;
+    right: -26%;
+    object-fit: cover;
 }
 
 #WheretheStoryTakesPlace {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 10px 30px 10px 30px;
-    align-items: end;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
 }
 
-#WheretheStoryTakesPlace h2 {}
+#WheretheStoryTakesPlace h2 {
+    grid-column: 2;
+    text-align: center;
+    font-size: 38px;
+}
 
 #WheretheStoryTakesPlace p {
-    width: 40%;
-    text-align: end;
+    width: 60%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    font-size: 24px;
+}
+
+#WheretheStoryTakesPlace img {
+    width: 70%;
+    align-self: center;
+    grid-row: 2;
+    position: relative;
+    top: -22%;
+    left: 18%;
 }
 
 #FullSummary {
-    display: flex;
-    flex-flow: column wrap;
-    margin: 10px 30px 10px 30px;
-    align-items: start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 20px;
 }
 
-#FullSummary h2 {}
+#FullSummary h2 {
+    grid-column: 1;
+    text-align: center;
+    font-size: 38px;
+}
 
 #FullSummary p {
-    width: 40%;
-    text-align: start;
+    width: 60%;
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+    grid-row: 2;
+    font-size: 24px;
+}
+
+#FullSummary img {
+    width: 70%;
+    align-self: center;
+    grid-row: 2;
+    position: relative;
+    top: -14%;
+    right: -14%;
 }
 
 #homePageBottomImageFade {
     background-image: linear-gradient(to bottom, var(--colour-main), var(--colour-main), transparent 60%);
-    padding-top: 15%;
+    padding-top: 8%;
     margin-top: 0%;
-    margin-bottom: -155px;
+    margin-bottom: -200px;
     z-index: 1;
 }
 
@@ -218,23 +315,37 @@ input:checked~.menu-content {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0% 0% 10% 0%;
+    padding: 0% 0% 8% 0%;
 }
 
 /* CHARACTERS */
 
+#characterPageTopImage p {
+    margin: 0px 30% 0px 30%;
+    padding: 0% 0px 1% 0px;
+    text-align: center;
+    font-size: 34px;
+    text-shadow: #00001b 2px 2px;
+}
+
+#characterPageTopImage h1 {
+    text-shadow: #00001b 2px 2px;
+    font-size: 64px;
+}
+
+
 #characterPageTopImage {
-    background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/2oBQPYJetpSuX6twwhPVIs/bdb5cfd9e2a5c9cb27bf8e2cd5238ab7/hp5-order-of-phoenix-exam-desks-hogwarts.jpg?q=75&fm=webp&w=2880);
+    background-image: url(https://d.newsweek.com/en/full/1033479/mcdhapo-ec030.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0% 0% 50% 0%;
-    margin-top: -20px;
+    padding: 30% 0% 0% 0%;
+    margin-top: -180px;
 }
 
 #characterPageTopFade {
     background-image: linear-gradient(to top, var(--colour-main), var(--colour-main), transparent 100%);
-    padding-top: 200px;
+    padding-top: 240px;
     margin-top: -200px;
 }
 
@@ -324,12 +435,13 @@ input:checked~.menu-content {
 .bookCarte h2 {
     margin: 6px;
     text-align: center;
-    font-size: 26px;
+    font-size: 32px;
 }
 
 .bookCarte p {
     text-align: center;
     align-self: center;
+    font-size: 22px;
 }
 
 .bookCarteBoite {
@@ -371,12 +483,26 @@ input:checked~.menu-content {
     flex: 1;
 }
 
+#contactPageTopImage p {
+    margin: 0px 25% 0px 25%;
+    padding: 2% 0px 0px 0px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#contactPageTopImage h1 {
+    margin: 0;
+    padding: 8% 10% 0% 10%;
+    text-align: center;
+    font-size: 44px;
+}
+
 #contactPageTopImage {
     background-image: url(https://contentful.harrypotter.com/usf1vwtuqyxm/3hL1zLNXwNNorUQPV344E5/05ad663a8aba784a918e4469abce6e85/News.png?q=75&fm=webp&w=2880);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 0% 0% 20% 0%;
+    padding: 0% 0% 4% 0%;
     margin-top: -20px;
 }
 
@@ -391,8 +517,8 @@ input:checked~.menu-content {
     justify-self: center;
     justify-items: center;
     background-color: rgb(0, 0, 0);
-    width: 30%;
-    margin: 2% 0px 0px 0px;
+    width: 20%;
+    margin: 0% 0px 40px 0px;
     padding: 20px 0px 0px 0px;
     border: 4px solid white;
     border-radius: 18px;
@@ -448,6 +574,7 @@ input:checked~.menu-content {
 
 #contactTitle {
     text-align: center;
+    margin-bottom: 1%;
 }
 
 #contactDescription {
@@ -587,54 +714,95 @@ input:checked~.menu-content {
         max-height: 100%;
     }
 
-    #WhoisHarryPotter {
-        display: flex;
-        flex-flow: column wrap;
-        margin: 10px 30px 10px 30px;
-        align-items: start;
+
+    .aboutContent {
+        justify-content: center;
+        flex: 1;
     }
 
-    #WhoisHarryPotter h2 {}
+    #WhoisHarryPotter {
+        display: flex;
+        flex-flow: column nowrap;
+        margin: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #WhoisHarryPotter h2 {
+        text-align: center;
+        font-size: 32px;
+    }
 
     #WhoisHarryPotter p {
-        width: 40%;
-        text-align: start;
+        width: 90%;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    #WhoisHarryPotter img {
+        width: 70%;
+        position: static;
+        margin: 20px;
     }
 
     #WheretheStoryTakesPlace {
         display: flex;
-        flex-flow: column wrap;
-        margin: 10px 30px 10px 30px;
-        align-items: end;
+        flex-flow: column;
+        margin: 20px;
     }
 
-    #WheretheStoryTakesPlace h2 {}
+    #WheretheStoryTakesPlace h2 {
+        text-align: center;
+        font-size: 32px;
+    }
 
     #WheretheStoryTakesPlace p {
-        width: 40%;
-        text-align: end;
+        width: 90%;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 18px;
+    }
+
+    #WheretheStoryTakesPlace img {
+        width: 90%;
+        align-self: center;
+        position: static;
+        margin: 20px;
     }
 
     #FullSummary {
         display: flex;
-        flex-flow: column wrap;
-        margin: 10px 30px 10px 30px;
-        align-items: start;
+        flex-flow: column;
+        margin: 20px 20px 0px 20px;
     }
 
-    #FullSummary h2 {}
+    #FullSummary h2 {
+        text-align: center;
+        font-size: 32px;
+    }
 
     #FullSummary p {
-        width: 40%;
-        text-align: start;
+        width: 90%;
+        text-align: center;
+        justify-self: center;
+        align-self: center;
+        font-size: 18px;
+    }
+
+    #FullSummary img {
+        width: 90%;
+        align-self: center;
+        position: static;
+        margin: 20px 20px 60% 20px;
     }
 
     #homePageBottomImageFade {
         background-image: linear-gradient(to bottom, var(--colour-main), var(--colour-main), transparent 60%);
-        padding-top: 15%;
-        margin-top: 0%;
-        margin-bottom: -15%;
-        z-index: 1;
+        padding-top: 24%;
+        margin-top: -50%;
+        margin-bottom: -100px;
     }
 
     #homePageBottomImage {
@@ -642,7 +810,7 @@ input:checked~.menu-content {
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        padding: 0% 0% 20% 0%;
+        padding: 0% 0% 30% 0%;
     }
 
     /* characters */
@@ -653,6 +821,19 @@ input:checked~.menu-content {
     }
 
     /* books */
+
+    .homeBackgroundImage p,
+    #characterPageTopImage p {
+        margin: 0px 10% 0px 10%;
+        padding: 20% 0px 0px 0px;
+        font-size: 120%;
+    }
+
+    .homeBackgroundImage h1,
+    #characterPageTopImage h1 {
+        padding: 2% 0% 0% 0%;
+        font-size: 220%;
+    }
 
     .topPageAbout {
         background-image: url(https://www.harrypotter.com/_next/static/images/books-desk-2880-d91f9951754bd9554ccb6ba8c68f1b2c.png);
@@ -666,14 +847,14 @@ input:checked~.menu-content {
         margin: 0px 10% 0px 10%;
         padding: 10% 0px 0px 0px;
         text-align: center;
-        font-size: 120%;
+        font-size: 100%;
     }
 
     .topPageAbout h1 {
         margin: 0px;
         padding: 2% 0% 0% 0%;
         text-align: center;
-        font-size: 280%;
+        font-size: 240%;
     }
 
     .topPageAboutFade {
@@ -697,24 +878,24 @@ input:checked~.menu-content {
     .bookCarte h2 {
         margin: 0px;
         text-align: center;
+        font-size: 28px;
     }
 
     .bookCarte p {
         text-align: center;
+        font-size: 18px;
     }
 
     .bookCover {
         align-self: center;
         width: 20%;
         margin: 8%;
+        margin: 2% 6% 2% 6%;
     }
 
     .bookName {}
 
-    .bookDescription {
-        margin: 2% 6% 2% 6%;
-        font-size: 18px;
-    }
+    .bookDescription {}
 
     .borderLineLine1 {
         border: 1px rgb(128, 128, 128, 0.6) solid;
@@ -739,6 +920,17 @@ input:checked~.menu-content {
     }
 
     /* Contact Page */
+
+    #contactPageTopImage p {
+        margin: 0px 6% 0px 6%;
+        padding: 10% 0px 38px 0px;
+        font-size: 100%;
+    }
+
+    #contactPageTopImage h1 {
+        padding: 12% 4% 0% 4%;
+        font-size: 160%;
+    }
 
     .contactBlock {
         display: block;
