@@ -11,6 +11,7 @@
     --colour-altOffWhite: #F2E8DC;
     --colour-softText: #7A4A2E;
     --colour-border: #060136;
+    --colour-harryyellow: #b98e00;
 }
 
 @view-transition {
@@ -103,10 +104,11 @@ header {}
     font-size: 32px;
     display: block;
     cursor: pointer;
-    background: url(https://cdn-icons-png.flaticon.com/128/8867/8867520.png) no-repeat left center;
+    /* background: url(https://cdn-icons-png.flaticon.com/128/8867/8867520.png) no-repeat left center; */
     background-size: 30px 35px;
-    padding: 0px 0px 4px 40px;
+    padding: 0px 0px 4px 0px;
     width: 90px;
+    color: var(--colour-harryyellow);
     text-align: center;
     align-self: center;
 }
@@ -116,11 +118,13 @@ input#menu {
 }
 
 input:checked+label {
-    background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png);
+    transform: rotate(0.25turn);
+    /* background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png); */
 }
 
 input:checked~label {
-    background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png);
+    transform: rotate(0.25turn);
+    /* background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png); */
 }
 
 input:checked~.menu-content {
@@ -135,6 +139,10 @@ input:checked~.menu-content {
     margin: 20px;
 }
 
+.homeBackgroundImage * {
+    text-shadow: #00001b 2px 2px;
+}
+
 .backgroundAudio {
     display: flex;
     justify-self: end;
@@ -142,15 +150,25 @@ input:checked~.menu-content {
 
 }
 
-.collapsible-menu button {
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    text-align: center;
+#muteButton {
     align-self: center;
+    position: relative;
+    right: -79%;
     border-radius: 100px;
-    max-width: 64px;
-    max-height: 60px;
+    width: 34px;
+    height: 34px;
+    background-color: var(--colour-main);
+    border: 2px var(--colour-harryyellow) solid;
+}
+
+#muteButton:hover {
+    border: 2px white solid;
+    background-color: var(--colour-secondary);
+}
+
+#muteButton:active {
+    border: 2px white solid;
+    background-color: var(--colour-border);
 }
 
 .audioPlayerAudio {
@@ -320,6 +338,15 @@ h1 {
 
 /* CHARACTERS */
 
+#characterPageTopImage {
+    background-image: url(https://d.newsweek.com/en/full/1033479/mcdhapo-ec030.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 16% 0% 0% 0%;
+    margin-top: -180px;
+}
+
 #characterPageTopImage p {
     margin: 0px 30% 0px 30%;
     padding: 0% 0px 1% 0px;
@@ -329,19 +356,12 @@ h1 {
 }
 
 #characterPageTopImage h1 {
+    margin-bottom: 18%;
     text-shadow: #00001b 2px 2px;
     font-size: 64px;
 }
 
 
-#characterPageTopImage {
-    background-image: url(https://d.newsweek.com/en/full/1033479/mcdhapo-ec030.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 30% 0% 0% 0%;
-    margin-top: -180px;
-}
 
 #characterPageTopFade {
     background-image: linear-gradient(to top, var(--colour-main), var(--colour-main), transparent 100%);
@@ -629,7 +649,7 @@ h1 {
         height: 54px;
         margin: 6px;
         position: absolute;
-        left: 19%;
+        left: 22%;
         top: 42%;
         transform: translate(-50%, -50%);
     }
@@ -657,7 +677,7 @@ h1 {
         display: flex;
         flex-flow: column;
         list-style-type: none;
-        padding: 2px;
+        padding: 2px 14px 2px 2px;
         margin: 0;
     }
 
@@ -690,10 +710,11 @@ h1 {
         font-size: 26px;
         display: block;
         cursor: pointer;
-        background: url(https://cdn-icons-png.flaticon.com/128/8867/8867520.png) no-repeat left center;
+        /* background: url(https://cdn-icons-png.flaticon.com/128/8867/8867520.png) no-repeat left center; */
         background-size: 20px 20px;
-        padding: 0px 0px 2px 28px;
+        padding: 10px 0px 10px 0px;
         width: 80px;
+        color: rgb(185, 142, 0);
         text-align: center;
         align-self: center;
     }
@@ -703,17 +724,27 @@ h1 {
     }
 
     input:checked+label {
-        background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png);
+        transform: rotate(0.25turn);
+        /* background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png); */
     }
 
     input:checked~label {
-        background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png);
+        transform: rotate(0.25turn);
+        /* background-image: url(https://cdn-icons-png.flaticon.com/128/16546/16546093.png); */
     }
 
     input:checked~.menu-content {
         max-height: 100%;
     }
 
+    #muteButton {
+        align-self: center;
+        position: relative;
+        right: -41%;
+        border-radius: 100px;
+        width: 34px;
+        height: 34px;
+    }
 
     .aboutContent {
         justify-content: center;
@@ -814,6 +845,29 @@ h1 {
     }
 
     /* characters */
+
+    #characterPageTopImage {
+        background-image: url(https://d.newsweek.com/en/full/1033479/mcdhapo-ec030.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 38% 0% 0% 0%;
+        margin-top: -180px;
+    }
+
+    #characterPageTopImage p {
+        margin: 0px 30% 0px 30%;
+        padding: 0% 0px 1% 0px;
+        text-align: center;
+        font-size: 34px;
+        text-shadow: #00001b 2px 2px;
+    }
+
+    #characterPageTopImage h1 {
+        margin-bottom: 38%;
+        text-shadow: #00001b 2px 2px;
+        font-size: 64px;
+    }
 
     #characterGrid {
         display: grid;
@@ -923,7 +977,7 @@ h1 {
 
     #contactPageTopImage p {
         margin: 0px 6% 0px 6%;
-        padding: 10% 0px 38px 0px;
+        padding: 5% 0px 48px 0px;
         font-size: 100%;
     }
 
@@ -932,14 +986,39 @@ h1 {
         font-size: 160%;
     }
 
-    .contactBlock {
-        display: block;
-        justify-self: center;
-        justify-items: center;
-        background-color: rgb(0, 0, 0);
-        width: 30%;
-        min-width: 270px;
+    #contactPageTopImageFade {
+        padding-top: 120px;
+        margin-top: -100px;
+    }
 
+    .contactBlock {
+        background-color: rgb(0, 0, 0);
+        max-height: 520px;
+        min-width: 250px;
+    }
+
+    .formName {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .formEmail {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .formPhoneNumber {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+
+    .formPassword {
+        display: flex;
+        flex-flow: column;
+        text-align: center;
     }
 
     .formCheckbox {

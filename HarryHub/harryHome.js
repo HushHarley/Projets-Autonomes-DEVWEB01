@@ -5,5 +5,5 @@ const muteButton = document.getElementById("muteButton");
 
 muteButton.addEventListener("click", function () {
     soundVolume.muted = !soundVolume.muted;
-    muteButton.textContent = soundVolume.muted ? "🔇 Unmute" : "🔊 Mute";
+    muteButton.textContent = soundVolume.muted ? "🔇" : "🔊";
 });
