@@ -11,7 +11,7 @@
     --colour-altOffWhite: #F2E8DC;
     --colour-softText: #7A4A2E;
     --colour-border: #060136;
-    --colour-harryyellow: #b98e00;
+    --colour-harryyellow: #a48623;
 }
 
 @view-transition {
@@ -59,7 +59,7 @@ header {}
     height: 83px;
     background-color: var(--colour-accent);
     padding: 0px 25px;
-    border-bottom: 2px var(--colour-white) solid;
+    border-bottom: 2px var(--colour-harryyellow) solid;
     border-bottom-left-radius: 26px;
     border-bottom-right-radius: 26px;
     box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);

@@ -15,10 +15,9 @@ function afficherData(donnees) {
         let div = document.createElement("div");
         div.classList = "characterCarte";
         div.innerHTML = `
-        <p class="children">${donnees[index].children}</p>
         <p class="hogwartsHouse">${donnees[index].hogwartsHouse}</p>
-        <p class="nickname">${donnees[index].nickname}</p>
-        <h2>${donnees[index].fullName}</h2>
+        <p class="nickname">${donnees[index].fullName}</p>
+        <h2>${donnees[index].nickname}</h2>
         <img src="${donnees[index].image || "https://cdn.iconscout.com/icon/free/png-512/free-help-icon-svg-download-png-2202931.png?f=webp&w=512"}" alt="">
         `
 
